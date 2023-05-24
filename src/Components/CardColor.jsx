@@ -56,7 +56,7 @@ const CardColor = () => {
             <Card.Text >
                 
              <aside >
-                <div className="ColorCard w-50">
+                <div className="ColorCard w-50 " >
 
                 </div>
              </aside>
