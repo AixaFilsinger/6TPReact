@@ -1,18 +1,18 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const CardColor = () => {
+const CardColor = ({color, borrarColor}) => {
   return (
-    <section className="row">
-      <aside className="col-md-4">
+   
+      <aside className="col-md-4 mb-3" >
         <Card>
-          <Card.Header as="h5">Nombre Color</Card.Header>
+          <Card.Header as="h5">{color}</Card.Header>
           <Card.Body className="Fondo">
            
             <Card.Text >
                 
              <aside >
-                <div className="ColorCard w-50">
+                <div className="ColorCard w-50" style={{background:color}}>
 
                 </div>
              </aside>
@@ -21,56 +21,13 @@ const CardColor = () => {
           </Card.Body>
           <Card.Footer>
            <aside className="text-end">
-                <Button variant="danger">Borrar</Button>
+                <Button variant="danger"  onClick={()=>borrarColor(color)}>Borrar</Button>
             </aside>
             </Card.Footer> 
         </Card>
       </aside>
-      <aside className="col-md-4">
-        <Card>
-          <Card.Header as="h5">Nombre Color</Card.Header>
-          <Card.Body className="Fondo">
-           
-            <Card.Text >
-                
-             <aside >
-                <div className="ColorCard w-50">
-
-                </div>
-             </aside>
-            </Card.Text>
-            
-          </Card.Body>
-          <Card.Footer>
-           <aside className="text-end">
-                <Button variant="danger">Borrar</Button>
-            </aside>
-            </Card.Footer> 
-        </Card>
-      </aside>
-      <aside className="col-md-4">
-        <Card>
-          <Card.Header as="h5">Nombre Color</Card.Header>
-          <Card.Body className="Fondo">
-           
-            <Card.Text >
-                
-             <aside >
-                <div className="ColorCard w-50 " >
-
-                </div>
-             </aside>
-            </Card.Text>
-            
-          </Card.Body>
-          <Card.Footer>
-           <aside className="text-end">
-                <Button variant="danger">Borrar</Button>
-            </aside>
-            </Card.Footer> 
-        </Card>
-      </aside>
-    </section>
+     
+    
   );
 };
 
